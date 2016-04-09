@@ -1,6 +1,6 @@
 extends Node
 
-var gen_size = 30
+var gen_size = 100
 
 var target = "me_thinks_it_is_like_a_weasel"
 var chars = [
@@ -36,7 +36,7 @@ func _ready():
 
 func compute_generation():
 	var best_value = target.length()
-	var best
+	var best = creatures[0]
 	
 	# Get the best creature
 	for i in creatures:
