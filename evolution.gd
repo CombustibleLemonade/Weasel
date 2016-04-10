@@ -1,18 +1,12 @@
 extends Node
 
-var gen_size = 100
+var gen_size = 27
 
-var target = "me_thinks_it_is_like_a_weasel"
+var target = "me thinks it is like a weasel"
 var chars = [
-'a', 'b', 'c', 
-'d', 'e', 'f', 
-'g', 'h', 'i', 
-'j', 'k', 'l', 
-'m', 'n', 'o', 
-'p', 'q', 'r', 
-'s', 't', 'u', 
-'v', 'w', 'x', 
-'y', 'z', '_']
+'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
+'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 
+'s', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
 
 var creatures = []
 var gen_count = 0
@@ -37,6 +31,8 @@ func _ready():
 func compute_generation():
 	var best_value = target.length()
 	var best = creatures[0]
+	
+	print(best)
 	
 	# Get the best creature
 	for i in creatures:
